@@ -8,7 +8,7 @@ public class ItemParser {
     private static Set<String> set = new HashSet<>();
 
     static {
-        set.add("chocolate");
+        set.add("chocolates");
         set.add("book");
         set.add("pills");
 

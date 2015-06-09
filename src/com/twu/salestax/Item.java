@@ -27,6 +27,7 @@ public class Item {
             totalSalesTax += actualCost * basicSalesTaxPercent;
         if (isImported)
             totalSalesTax += actualCost * importedSalesTaxPercent;
+
         return quantity * totalSalesTax;
     }
 
