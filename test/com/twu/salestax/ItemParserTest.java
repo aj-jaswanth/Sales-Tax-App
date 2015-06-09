@@ -10,7 +10,7 @@ public class ItemParserTest {
     public void shouldParseGivenItemDescription() {
         Item actualItem = ItemParser.parse("1 imported bottle of perfume at 47.50");
 
-        Item expectedItem = new Item("1 imported bottle of perfume at 47.50", 1, 47.50, true, true);
+        Item expectedItem = new Item("1 imported bottle of perfume", 1, 47.50, true, true);
 
         assertEquals(expectedItem, actualItem);
     }

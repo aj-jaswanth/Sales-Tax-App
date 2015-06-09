@@ -14,7 +14,7 @@ public class Receipt {
     public String toString() {
         String response = "";
         for (Item item : items)
-            response += item.toString() + "\n";
+            response += item.toString();
         return response;
     }
 }
