@@ -9,7 +9,7 @@ import static org.junit.Assert.assertThat;
 public class ItemTest {
     @Test
     public void shouldComputeItsTotalCost() {
-        Item item = new Item(10.0, false, true);
+        Item item = new Item(1, 10.0, false, true);
 
         double actualCost = item.totalCost();
 
@@ -18,7 +18,7 @@ public class ItemTest {
 
     @Test
     public void shouldComputeTotalSalesTaxApplied() {
-        Item item = new Item(47.50, true, true);
+        Item item = new Item(1, 47.50, true, true);
 
         double actualSalesTaxApplied = item.totalSalesTaxApplied();
 
