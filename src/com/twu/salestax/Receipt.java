@@ -6,8 +6,8 @@ public class Receipt {
 
     private ArrayList<Item> items = new ArrayList<Item>();
 
-    public void addItem(Item item) {
-        items.add(item);
+    public void addItem(String itemDetails) {
+        items.add(ItemParser.parse(itemDetails));
     }
 
     @Override

@@ -5,19 +5,15 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class ReceiptTest {
     @Test
-    public void shouldPrintAllItemsItHas() {
+    public void shouldDisplayTotalCostOfAllItems() {
         Receipt receipt = new Receipt();
-        Item item = mock(Item.class);
-        when(item.toString()).thenReturn("");
-        receipt.addItem(item);
+        receipt.addItem("1 imported bottle of perfume at 47.50");
 
-        String actualItemDescription = item.toString();
+        String actualDescription = receipt.toString();
 
-        assertThat(actualItemDescription, is(equalTo("")));
+        assertThat(actualDescription, is(equalTo("1 imported bottle of perfume : 54.65")));
     }
 }
