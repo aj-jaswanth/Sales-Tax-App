@@ -8,11 +8,20 @@ import static org.junit.Assert.assertThat;
 
 public class ItemTest {
     @Test
-    public void itemShouldBeAbleToComputeItsCost() {
-        Item item = new Item("1 imported box of chocolates at 10.00");
+    public void shouldComputeItsTotalCost() {
+        Item item = new Item(10.0, false, true);
 
-        double actualCost = item.actualCost();
+        double actualCost = item.totalCost();
 
-        assertThat(actualCost, is(equalTo(10.0)));
+        assertThat(actualCost, is(equalTo(10.50)));
+    }
+
+    @Test
+    public void shouldComputeTotalSalesTaxApplied() {
+        Item item = new Item(47.50, true, true);
+
+        double actualSalesTaxApplied = item.totalSalesTaxApplied();
+
+        assertThat(actualSalesTaxApplied, is(equalTo(7.125)));
     }
 }
