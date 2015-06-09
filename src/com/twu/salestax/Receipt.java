@@ -13,8 +13,15 @@ public class Receipt {
     @Override
     public String toString() {
         String response = "";
-        for (Item item : items)
-            response += item.toString();
+        double salesTax = 0;
+        double totalCost = 0;
+        for (Item item : items) {
+            response += item.toString() + "\n";
+            salesTax += item.totalSalesTaxApplied();
+            totalCost += item.totalCost();
+        }
+        response += "Sales Tax: " + salesTax + "\n";
+        response += "Total: " + totalCost;
         return response;
     }
 }

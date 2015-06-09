@@ -10,6 +10,8 @@ public class ItemParser {
     static {
         set.add("chocolate");
         set.add("book");
+        set.add("pills");
+
     }
 
     public static Item parse(String itemDetails) {

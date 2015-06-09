@@ -14,6 +14,7 @@ public class ReceiptTest {
 
         String actualDescription = receipt.toString();
 
-        assertThat(actualDescription, is(equalTo("1 imported bottle of perfume: 54.625")));
+        assertThat(actualDescription, is(equalTo("1 imported bottle of perfume: 54.625\n" +
+                "Sales Tax: 7.125\nTotal: 54.625")));
     }
 }
